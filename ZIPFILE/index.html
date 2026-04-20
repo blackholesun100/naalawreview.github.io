@@ -10,4 +10,11 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
+<script>
+fetch('./data/content.json')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("ai-text").innerText = data.text;
+  });
+</script>
+<p id="ai-text"></p>
